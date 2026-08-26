@@ -1,3 +1,5 @@
+import javax.naming.InsufficientResourcesException;
+
 public class BankAccount {
     private double balance;
 
@@ -5,7 +7,7 @@ public class BankAccount {
         this.balance=balance;
 
     }
-    public void withdraw(double amount){
+    public void withdraw(double amount) throws  {
         if(amount<=0){
             throw new IllegalArgumentException("Amount cannot be 0 or negative!");
         }
